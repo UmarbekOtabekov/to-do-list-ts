@@ -29,8 +29,8 @@ function Home() {
     }
 
     const handleDeleteTodo = (index: any) => {
-        setTodoToDelete(index)  // Set the index of the todo to be deleted
-        setIsModalOpen(true) // Open the modal
+        setTodoToDelete(index) 
+        setIsModalOpen(true) 
         toast.info("Are you sure you want to delete this plan?", {
             autoClose: 1000
         })
