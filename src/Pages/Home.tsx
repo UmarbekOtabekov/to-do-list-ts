@@ -5,8 +5,6 @@ import { toast } from 'react-toastify';
 function Home() {
     const [todos, setTodos] = useState<string[] | any>(JSON.parse(localStorage.getItem("todos")) || []);
     const [input, setInput] = useState<string>('');
-
-    // Modal state for confirmation
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [todoToDelete, setTodoToDelete] = useState<number | null>(null);
 
@@ -26,8 +24,8 @@ function Home() {
     };
 
     const handleDeleteTodo = (index: number) => {
-        setTodoToDelete(index);  // Set the index of the todo to be deleted
-        setIsModalOpen(true); // Open the modal
+        setTodoToDelete(index); 
+        setIsModalOpen(true); 
     };
 
     const confirmDelete = () => {
